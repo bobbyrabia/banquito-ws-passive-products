@@ -16,7 +16,7 @@ import lombok.Setter;
 @Document(collection = "productAccount")
 public class ProductAccount {
     @Id
-    private Integer id;
+    private String id;
     @Indexed(unique = true)
     private String uniqueKey;
     private String productAccountTypeId;
