@@ -1,7 +1,10 @@
 package ec.edu.espe.arquitectura.banquito.passive.products.service;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
+import ec.edu.espe.arquitectura.banquito.passive.products.model.ProductAccount;
 import ec.edu.espe.arquitectura.banquito.passive.products.model.ProductAccountType;
 import ec.edu.espe.arquitectura.banquito.passive.products.repository.ProductAccountTypeRepository;
 
@@ -14,6 +17,12 @@ public ProductAccountTypeService(ProductAccountTypeRepository productAccountType
 }
 
 public ProductAccountType findByName(String name){
-    return this.productAccountTypeRepository.findByName(name);
+    Optional<ProductAccountType> productAccountTypeTemp =this.productAccountTypeRepository.findByName(name);
+        if(productAccountTypeTemp.isPresent()){
+        return productAccountTypeTemp.get();
+        }
+        else{
+            throw new RuntimeException("ProductAccountType con nombre: " + name + " no encontrado");
+        }
 }    
 }

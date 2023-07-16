@@ -1,6 +1,8 @@
 package ec.edu.espe.arquitectura.banquito.passive.products.repository;
 
 
+import java.util.Optional;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,5 +10,5 @@ import ec.edu.espe.arquitectura.banquito.passive.products.model.ProductAccountTy
 
 @Repository
 public interface ProductAccountTypeRepository extends MongoRepository <ProductAccountType, String> {
-    ProductAccountType findByName(String name);
+    Optional<ProductAccountType> findByName(String name);
 }

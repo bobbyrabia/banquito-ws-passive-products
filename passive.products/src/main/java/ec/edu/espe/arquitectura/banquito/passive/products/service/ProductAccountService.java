@@ -1,5 +1,7 @@
 package ec.edu.espe.arquitectura.banquito.passive.products.service;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
 import ec.edu.espe.arquitectura.banquito.passive.products.model.ProductAccount;
@@ -17,6 +19,12 @@ public class ProductAccountService {
 
 
     public ProductAccount findByUniqueKey(String uniqueKey){
-        return  this.productAccountRepository.findByUniqueKey(uniqueKey);
+        Optional<ProductAccount> productAccountTemp =this.productAccountRepository.findByUniqueKey(uniqueKey);
+        if(productAccountTemp.isPresent()){
+        return productAccountTemp.get();
+        }
+        else{
+            throw new RuntimeException("ProductAccount con uniqueKey: " + uniqueKey + " no encontrado");
+        }
     }
 }
