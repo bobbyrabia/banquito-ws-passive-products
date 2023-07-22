@@ -35,7 +35,7 @@ public class ProductAccount {
     private Date activationDate;
     private Date lastModifiedDate;
     private Date closedDate;
-
+    
     @Override
     public int hashCode() {
         final int prime = 31;

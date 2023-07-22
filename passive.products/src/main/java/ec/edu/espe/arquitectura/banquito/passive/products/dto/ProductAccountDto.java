@@ -23,5 +23,6 @@ public class ProductAccountDto {
     private BigDecimal minOpeningBalance;
     private BigDecimal minInterest;
     private BigDecimal maxInterest;
+    
 
 }

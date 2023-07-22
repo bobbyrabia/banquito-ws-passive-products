@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ec.edu.espe.arquitectura.banquito.passive.products.dto.ProductAccountDto;
 import ec.edu.espe.arquitectura.banquito.passive.products.model.ProductAccount;
 import ec.edu.espe.arquitectura.banquito.passive.products.service.ProductAccountService;
 
@@ -19,7 +20,7 @@ public class ProductAccountController {
     }
 
     @GetMapping("/{uniqueKey}")
-    public ResponseEntity<ProductAccount> findByUniqueKey(@PathVariable("uniqueKey") String uniqueKey ){
+    public ResponseEntity<ProductAccountDto> findByUniqueKey(@PathVariable("uniqueKey") String uniqueKey ){
         return ResponseEntity.ok(this.productAccountService.findByUniqueKey(uniqueKey));
     }
 
