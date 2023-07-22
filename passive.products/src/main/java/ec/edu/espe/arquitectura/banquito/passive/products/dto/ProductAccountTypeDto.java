@@ -12,20 +12,12 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ProductAccountTypeDto {
     private String name;
-
     private String clientType;
-
     private String superType;
-
     private String temporalityInterest;
-
     private Boolean allowEarnInterest;
-
     private Boolean allowAccountStatement;
-
     private Boolean allowBranchTransactions;
-
     private Boolean allowWithdrawal;
-    
-    private List<ProductAccount> productAccount;   
+    private Long version; 
 }

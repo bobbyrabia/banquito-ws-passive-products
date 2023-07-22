@@ -3,6 +3,7 @@ package ec.edu.espe.arquitectura.banquito.passive.products.model;
 import java.math.BigDecimal;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
@@ -18,8 +19,8 @@ public class ProductAccount {
     @Id
     private String id;
     @Indexed(unique = true)
-    private String uniqueKey;
-    private String productAccountTypeId;
+    private String uniqueId;
+    private ProductAccountType productAccountType;
     private String name;
     private String temporalityAccountStatement;
     private Boolean useCheckbook;
@@ -35,12 +36,15 @@ public class ProductAccount {
     private Date activationDate;
     private Date lastModifiedDate;
     private Date closedDate;
+    private Boolean valid;
+    @Version
+    private Long version;
     
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((uniqueKey == null) ? 0 : uniqueKey.hashCode());
+        result = prime * result + ((uniqueId == null) ? 0 : uniqueId.hashCode());
         return result;
     }
     @Override
@@ -52,13 +56,16 @@ public class ProductAccount {
         if (getClass() != obj.getClass())
             return false;
         ProductAccount other = (ProductAccount) obj;
-        if (uniqueKey == null) {
-            if (other.uniqueKey != null)
+        if (uniqueId == null) {
+            if (other.uniqueId != null)
                 return false;
-        } else if (!uniqueKey.equals(other.uniqueKey))
+        } else if (!uniqueId.equals(other.uniqueId))
             return false;
         return true;
     }
+
+
+
 
     
 
