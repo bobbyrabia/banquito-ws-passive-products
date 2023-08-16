@@ -1,0 +1,156 @@
+[{
+  "_id": {
+    "$oid": "64bb5b606e6b94d96fce1ccd"
+  },
+  "uniqueId": "ID-123",
+  "productArrearsSettings": [
+    {
+      "defaultTolerancePeriod": 10,
+      "minTolerancePeriod": 5,
+      "maxTolerancePeriod": 20,
+      "monthlyToleranceDay": 15,
+      "version": 1
+    }
+  ],
+  "loanRequirement": {
+    "name": "Requisito",
+    "description": "Descripción del requisito",
+    "type": "Tipo de requisito",
+    "documentation": "Documentación requerida",
+    "version": 1
+  },
+  "creationDate": {
+    "$numberLong": "1679876543210"
+  },
+  "lastModifiedDate": {
+    "$numberLong": "1679876543210"
+  },
+  "cappingPercentage": 25.5,
+  "cappingMethod": "OUP",
+  "interestType": "SMP",
+  "name": "Producto de Prueba",
+  "description": "Descripción del producto",
+  "defaultLoanAmount": 1000.5,
+  "minLoanAmount": 500,
+  "maxLoanAmount": 5000,
+  "defaultNumInstallments": 12,
+  "minNumInstallments": 6,
+  "maxNumInstallments": 24,
+  "defaultGracePeriod": 30,
+  "minGracePeriod": 15,
+  "maxGracePeriod": 60,
+  "gracePeriodType": "NON",
+  "defaultRepaymentPeriodCount": 1,
+  "repaymentPeriodUnit": "MTH",
+  "defaultPenaltyRate": 5,
+  "minPenaltyRate": 2,
+  "maxPenaltyRate": 10,
+  "interestCalculationMethod": "FLT",
+  "loanPenaltyCalculationMethod": "DCB",
+  "valid": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "64bb5c3a6e6b94d96fce1cd1"
+  },
+  "uniqueId": "ID-12s3",
+  "productArrearsSettings": [
+    {
+      "defaultTolerancePeriod": 10,
+      "minTolerancePeriod": 5,
+      "maxTolerancePeriod": 20,
+      "monthlyToleranceDay": 15,
+      "version": 1
+    }
+  ],
+  "loanRequirement": {
+    "name": "Requisito",
+    "description": "Descripción del requisito",
+    "type": "Tipo de requisito",
+    "documentation": "Documentación requerida",
+    "version": 1
+  },
+  "creationDate": {
+    "$numberLong": "1679876543210"
+  },
+  "lastModifiedDate": {
+    "$numberLong": "1679876543210"
+  },
+  "cappingPercentage": 25.5,
+  "cappingMethod": "OUP",
+  "interestType": "SMP",
+  "name": "Producto de Prueba",
+  "description": "Descripción del producto",
+  "defaultLoanAmount": 1000.5,
+  "minLoanAmount": 500,
+  "maxLoanAmount": 5000,
+  "defaultNumInstallments": 12,
+  "minNumInstallments": 6,
+  "maxNumInstallments": 24,
+  "defaultGracePeriod": 30,
+  "minGracePeriod": 15,
+  "maxGracePeriod": 60,
+  "gracePeriodType": "NON",
+  "defaultRepaymentPeriodCount": 1,
+  "repaymentPeriodUnit": "MTH",
+  "defaultPenaltyRate": 5,
+  "minPenaltyRate": 2,
+  "maxPenaltyRate": 10,
+  "interestCalculationMethod": "FLT",
+  "loanPenaltyCalculationMethod": "DCB",
+  "valid": false,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "64bb5c4a6e6b94d96fce1cd3"
+  },
+  "uniqueId": "ID-1sf23",
+  "productArrearsSettings": [
+    {
+      "defaultTolerancePeriod": 10,
+      "minTolerancePeriod": 5,
+      "maxTolerancePeriod": 20,
+      "monthlyToleranceDay": 15,
+      "version": 1
+    }
+  ],
+  "loanRequirement": {
+    "name": "Requisito",
+    "description": "Descripción del requisito",
+    "type": "Tipo de requisito",
+    "documentation": "Documentación requerida",
+    "version": 1
+  },
+  "creationDate": {
+    "$numberLong": "1679876543210"
+  },
+  "lastModifiedDate": {
+    "$numberLong": "1679876543210"
+  },
+  "cappingPercentage": 25.5,
+  "cappingMethod": "OUP",
+  "interestType": "SMP",
+  "name": "Producto de Prueba",
+  "description": "Descripción del producto",
+  "defaultLoanAmount": 1000.5,
+  "minLoanAmount": 500,
+  "maxLoanAmount": 5000,
+  "defaultNumInstallments": 12,
+  "minNumInstallments": 6,
+  "maxNumInstallments": 24,
+  "defaultGracePeriod": 30,
+  "minGracePeriod": 15,
+  "maxGracePeriod": 60,
+  "gracePeriodType": "NON",
+  "defaultRepaymentPeriodCount": 1,
+  "repaymentPeriodUnit": "MTH",
+  "defaultPenaltyRate": 5,
+  "minPenaltyRate": 2,
+  "maxPenaltyRate": 10,
+  "interestCalculationMethod": "FLT",
+  "loanPenaltyCalculationMethod": "DCB",
+  "valid": true,
+  "version": 1
+}]

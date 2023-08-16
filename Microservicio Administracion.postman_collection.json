@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "24cdf87e-860c-485e-8087-b376ddd9b6f1",
+		"name": "Microservicio Administracion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25124039"
+	},
+	"item": [
+		{
+			"name": "Bank Entity",
+			"item": [
+				{
+					"name": "Branch",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{           \r\n    \"code\": \"PICHIXXBQ1002\",\r\n    \"bankEntityId\" : \"64b09cc56666b939a406a823\",\r\n    \"locationId\": \"6e7c6af1-3416-497b-97b6-f047add025c3\",\r\n    \"name\": \"Banquito Sur II\",\r\n    \"emailAddress\": \"banquito_centro@bank.com\",\r\n    \"phoneNumber\": \"0982713133\",\r\n    \"line1\": \"Amazonas\",\r\n    \"line2\": \"24 Balsas\",\r\n    \"latitude\": -0.22925,\r\n    \"longitude\": -48.52495\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bankEntity/addBranch",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bankEntity",
+										"addBranch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{           \r\n    \"name\": \"Banquito Centro\",\r\n    \"emailAddress\": \"banquito_centro@bank.com\",\r\n    \"phoneNumber\": \"0982713133\",\r\n    \"line1\": \"Moro Moro\",\r\n    \"line2\": \"24 Balsas\",\r\n    \"latitude\": -0.22985,\r\n    \"longitude\": -78.52495\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bankEntity/updateBranch/PICHIXXBQ100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bankEntity",
+										"updateBranch",
+										"PICHIXXBQ100"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bankEntity/deleteBranch/PICHIXXBQ1000",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bankEntity",
+										"deleteBranch",
+										"PICHIXXBQ1000"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findByCode",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bankEntity/findBranch/PICHIXXBQ1001",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bankEntity",
+										"findBranch",
+										"PICHIXXBQ1001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findByState",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bankEntity/findAllBranches/ACT",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bankEntity",
+										"findAllBranches",
+										"ACT"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "findByInternationalCode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/bankEntity/find/BANKECQX",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bankEntity",
+								"find",
+								"BANKECQX"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GeoStructure",
+			"item": [
+				{
+					"name": "Country",
+					"item": [
+						{
+							"name": "createCountry",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"countryCode\" : \"ECU\",\r\n    \"name\" : \"Ecuador\",\r\n    \"phoneCode\" : \"593\",\r\n    \"geoStructures\" : [\r\n        {\r\n            \"levelCode\": 1,\r\n            \"name\" : \"Provincia\"\r\n        },\r\n        {\r\n            \"levelCode\": 2,\r\n            \"name\" : \"Parroquia\"\r\n        },        \r\n        {\r\n            \"levelCode\": 3,\r\n            \"name\" : \"Canton\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/geoCountry/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"geoCountry",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateCountry",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Ecuador\",\r\n    \"phoneCode\" : \"593\",\r\n    \"geoStructures\" : [\r\n        {\r\n            \"levelCode\": 1,\r\n            \"name\" : \"Provincia\"\r\n        },\r\n        {\r\n            \"levelCode\": 2,\r\n            \"name\" : \"Parroquia\"\r\n        },        \r\n        {\r\n            \"levelCode\": 3,\r\n            \"name\" : \"Canton\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/geoCountry/update/ECU",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"geoCountry",
+										"update",
+										"ECU"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/geoCountry/delete/COL",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"geoCountry",
+										"delete",
+										"COL"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetByCode",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/geoCountry/findByCountryCode/ECU",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"geoCountry",
+										"findByCountryCode",
+										"ECU"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GeoLocation",
+					"item": [
+						{
+							"name": "createLocation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"countryCode\": \"ECU\",\r\n    \"levelParentId\": 2,\r\n    \"levelParentName\": \"Quito\",\r\n    \"levelCode\": 3,\r\n    \"levelName\": \"Parroquia\",\r\n    \"name\": \"Solanda\",\r\n    \"areaPhoneCode\": null,\r\n    \"zipCode\": \"1224\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/geoLocation/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"geoLocation",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SearchBySpecificCriteria",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/geoLocation/findByCountryCodeAndName?countryCode=ECU&name=Quito",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"geoLocation",
+										"findByCountryCodeAndName"
+									],
+									"query": [
+										{
+											"key": "countryCode",
+											"value": "ECU"
+										},
+										{
+											"key": "name",
+											"value": "Quito"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SearchByParentName",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/geoLocation/CountryCodeAndParentName?countryCode=ECU&parentName=Quito",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"geoLocation",
+										"CountryCodeAndParentName"
+									],
+									"query": [
+										{
+											"key": "countryCode",
+											"value": "ECU"
+										},
+										{
+											"key": "parentName",
+											"value": "Quito"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findByUuid",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/geoLocation/findByUuid/963510c5-16df-4678-9f9a-18feab5d7356",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"geoLocation",
+										"findByUuid",
+										"963510c5-16df-4678-9f9a-18feab5d7356"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Holiday",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"holidayDate\" : \"2022-12-10\",\r\n    \"countryCode\" : \"ECU\",\r\n    \"geoLocationId\" : \"60ace7b9-0d93-4d54-b67a-3a1558744fa3\",\r\n    \"name\" : \"Dia Nacional del Encebollado\",\r\n    \"type\" : \"NAC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/holiday/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"holiday",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"holidayDate\" : \"2024-01-01\",\r\n    \"countryCode\" : \"ECU\",\r\n    \"geoLocationId\" : \"963510c5-16df-4678-9f9a-18feab5d7356\",\r\n    \"name\" : \"Año Nuevo\",\r\n    \"type\" : \"NAC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/holiday/update/bcfe7644-a2c8-41ce-a33e-9c86f5a74932",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"holiday",
+								"update",
+								"bcfe7644-a2c8-41ce-a33e-9c86f5a74932"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByCodeCountry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/holiday/findByCountryCode/ECU",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"holiday",
+								"findByCountryCode",
+								"ECU"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByLocationUuid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/holiday/findByGeoLocationId/60ace7b9-0d93-4d54-b67a-3a1558744fa3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"holiday",
+								"findByGeoLocationId",
+								"60ace7b9-0d93-4d54-b67a-3a1558744fa3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate Weekends Holiday",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/holiday/holidayCountry/generate-weekends/ECU?year=2023&month=4&saturday=true&sunday=true",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"holiday",
+								"holidayCountry",
+								"generate-weekends",
+								"ECU"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								},
+								{
+									"key": "month",
+									"value": "4"
+								},
+								{
+									"key": "saturday",
+									"value": "true"
+								},
+								{
+									"key": "sunday",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

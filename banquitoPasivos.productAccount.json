@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "64bc9bf098ab5cc1090893c3"
+  },
+  "uniqueId": "12345",
+  "productAccountType": {
+    "name": "Type1",
+    "clientType": "ClientType1",
+    "superType": "SuperType1",
+    "temporalityInterest": "Interest1",
+    "allowEarnInterest": true,
+    "allowAccountStatement": true,
+    "allowBranchTransactions": true,
+    "allowWithdrawal": true,
+    "version": 1
+  },
+  "name": "Account1",
+  "temporalityAccountStatement": "TempStatement1",
+  "useCheckbook": true,
+  "allowOverdraft": true,
+  "allowTransferences": true,
+  "maxOverdraft": 1000,
+  "clientType": "ClientType2",
+  "minOpeningBalance": 500,
+  "minInterest": 0.5,
+  "maxInterest": 2,
+  "state": "Active",
+  "creationDate": "2023-07-05",
+  "activationDate": "2023-07-05",
+  "lastModifiedDate": "2023-07-05",
+  "closedDate": "2023-07-06T00:00:00Z",
+  "valid": true,
+  "version": 1
+}]
