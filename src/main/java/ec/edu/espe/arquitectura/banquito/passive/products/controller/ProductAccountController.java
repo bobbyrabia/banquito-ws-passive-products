@@ -4,10 +4,7 @@ import java.util.List;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import ec.edu.espe.arquitectura.banquito.passive.products.dto.ProductAccountDto;
 import ec.edu.espe.arquitectura.banquito.passive.products.dto.ProductAccountSelectResponse;
@@ -25,7 +22,7 @@ public class ProductAccountController {
         this.productAccountService = productAccountService;
     }
 
-        @GetMapping("productos")
+        @GetMapping("/productos")
     public ResponseEntity<List<ProductAccountDto>> listLoandProduct() {
         List<ProductAccountDto> loanProductResponses = productAccountService.productAccountList();
         try
@@ -37,7 +34,7 @@ public class ProductAccountController {
         }
     }
 
-        @GetMapping("selected")
+        @GetMapping("/selected")
     public ResponseEntity<List<ProductAccountSelectResponse>> listLoandProductSelected() {
         List<ProductAccountSelectResponse> productAccountSelectResponses = productAccountService.productAccountSelectList();
         try
@@ -50,7 +47,7 @@ public class ProductAccountController {
     }
 
         
-    @GetMapping("selected/{uniqueId}")
+    @GetMapping("/selected/{uniqueId}")
     public ResponseEntity<ProductAccountSelectResponse> findBySelected(@PathVariable String uniqueId) {
         try {
             return ResponseEntity.ok(productAccountService.FindByIDSelected(uniqueId));
@@ -59,7 +56,7 @@ public class ProductAccountController {
         }
     }
 
-        @GetMapping("productos/{uniqueId}")
+        @GetMapping("/productos/{uniqueId}")
     public ResponseEntity<ProductAccountDto> findByProductos(@PathVariable String uniqueId) {
         try {
             return ResponseEntity.ok(productAccountService.FindByID(uniqueId));
@@ -67,7 +64,4 @@ public class ProductAccountController {
             return ResponseEntity.notFound().build();
         }
     }
-
-
-    
 }
