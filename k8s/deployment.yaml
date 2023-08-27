@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bquito-passive-app
+spec:
+  selector:
+    matchLabels:
+      app: bquito-passive-app
+  template:
+    metadata:
+      labels:
+        app: bquito-passive-app
+    spec:
+      containers:
+        - name: bquito-passive
+          image: rpfreire1/bquito-passive
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: bquito-passive-svc
+spec:
+  selector:
+    app: bquito-passive-app
+  ports:
+    - port: 80
+      targetPort: 3000
