@@ -1,0 +1,16 @@
+ec\edu\espe\arquitectura\banquito\passive\products\dto\ProductAccountSelectResponse.class
+ec\edu\espe\arquitectura\banquito\passive\products\utils\MapperConfig.class
+ec\edu\espe\arquitectura\banquito\passive\products\config\CorsConfig$1.class
+ec\edu\espe\arquitectura\banquito\passive\products\dto\ProductAccountDto.class
+ec\edu\espe\arquitectura\banquito\passive\products\converts\Converters$2.class
+ec\edu\espe\arquitectura\banquito\passive\products\dto\ProductAccountTypeDto.class
+ec\edu\espe\arquitectura\banquito\passive\products\Application.class
+ec\edu\espe\arquitectura\banquito\passive\products\converts\Converters.class
+ec\edu\espe\arquitectura\banquito\passive\products\converts\Converters$3.class
+ec\edu\espe\arquitectura\banquito\passive\products\model\ProductAccount.class
+ec\edu\espe\arquitectura\banquito\passive\products\controller\ProductAccountController.class
+ec\edu\espe\arquitectura\banquito\passive\products\repository\ProductAccountRepository.class
+ec\edu\espe\arquitectura\banquito\passive\products\service\ProductAccountService.class
+ec\edu\espe\arquitectura\banquito\passive\products\converts\Converters$1.class
+ec\edu\espe\arquitectura\banquito\passive\products\config\CorsConfig.class
+ec\edu\espe\arquitectura\banquito\passive\products\model\ProductAccountType.class
