@@ -14,8 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @Slf4j
-@RequestMapping("/api/v1/productAccount")
-@CrossOrigin({"http://localhost:4200"})
+@RequestMapping("api/v1/productAccount")
 public class ProductAccountController {
     private final ProductAccountService productAccountService;
 
