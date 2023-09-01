@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class Cors {
+public class CorsConfig {
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
@@ -18,7 +18,6 @@ public class Cors {
                         .allowedOrigins("https://banquito-web.web.app")
                         .allowedOrigins("https://banquito-tellerapp.web.app")
                         .allowedOrigins("http://localhost:4200")
-                        .allowedOrigins("https://banquito-backoffice-v2.web.app")
                         .exposedHeaders("Content-Disposition","Content-Type")
                         .allowedMethods("*");
             }

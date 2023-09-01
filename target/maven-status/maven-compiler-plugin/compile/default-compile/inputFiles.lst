@@ -1,5 +1,6 @@
 D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\controller\ProductAccountController.java
 D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\service\ProductAccountService.java
+D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\config\CorsConfig.java
 D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\repository\ProductAccountRepository.java
 D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\dto\ProductAccountDto.java
 D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\model\ProductAccount.java
@@ -7,6 +8,5 @@ D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquit
 D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\dto\ProductAccountSelectResponse.java
 D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\dto\ProductAccountTypeDto.java
 D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\model\ProductAccountType.java
-D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\config\Cors.java
 D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\Application.java
 D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-passive-products\src\main\java\ec\edu\espe\arquitectura\banquito\passive\products\utils\MapperConfig.java
